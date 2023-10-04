@@ -1,0 +1,72 @@
+@import "partials/reset";
+@import "partials/animations";
+@import "partials/colors";
+@import "partials/buttons";
+@import "partials/font";
+@import "partials/space";
+@import "partials/mixins";
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   background: url("../assets/img/hero-bg-original.jpg");
+   background-size: cover;
+}
+
+nav {
+   background-color: $bg_hero_nav;
+   display: flex;
+   width: 100%;
+   position: fixed;
+   top: 0;
+
+   ul {
+      width: 500px;
+      display: flex;
+
+      li a {
+         color: #fff;
+      }
+   }
+}
+
+main {
+   height: 100%;
+   //   width: 100%;
+
+   display: flex;
+
+   .hero {
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      background-color: $bg_hero;
+
+      h1,
+      p {
+         color: #fff;
+      }
+
+      .buttons {
+         display: flex;
+         width: 50%;
+
+         button {
+            @include floating;
+            width: 100%;
+         }
+      }
+   }
+}

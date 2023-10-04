@@ -1,0 +1,81 @@
+$spacing-pading-margin: (
+   sm: 1em,
+   normal: 1.2em,
+   md: 1.4em,
+   lg: 1.6em,
+   xl: 1.8em,
+   xxl: 2em,
+);
+
+// border
+.b-0 {
+   border: none;
+}
+
+@each $property, $size in $spacing-pading-margin {
+   // padding
+   .p-block-#{$property} {
+      padding: $size;
+      display: block;
+   }
+   .p-inline-#{$property} {
+      padding: $size;
+      display: inline;
+   }
+   .p-#{$property} {
+      padding: $size;
+   }
+   .pt-#{$property} {
+      padding-top: $size;
+   }
+   .pb-#{$property} {
+      padding-bottom: $size;
+   }
+   .py-#{$property} {
+      padding-bottom: $size;
+      padding-top: $size;
+   }
+   .ps-#{$property} {
+      padding-left: $size;
+   }
+   .pe-#{$property} {
+      padding-right: $size;
+   }
+   .px-#{$property} {
+      padding-right: $size;
+      padding-left: $size;
+   }
+
+   //  margin
+   .m-block-#{$property} {
+      margin: $size;
+      display: block;
+   }
+   .m-inline-#{$property} {
+      margin: $size;
+      display: inline;
+   }
+   .m-#{$property} {
+      margin: $size;
+   }
+   .mt-#{$property} {
+      margin-top: $size;
+   }
+   .mb-#{$property} {
+      margin-bottom: $size;
+   }
+   .my-#{$property} {
+      margin-bottom: $size;
+      margin-top: $size;
+   }
+   .ms-#{$property} {
+      margin-left: $size;
+   }
+   .me-#{$property} {
+      margin-right: $size;
+   }
+   .mx-#{$property} {
+      margin-right: $size;
+      margin-left: $size;
+   }
+}

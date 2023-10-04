@@ -1,0 +1,5 @@
+@each $property, $value in $btn-color {
+   .btn-#{$property} {
+      background-color: $value;
+   }
+}

@@ -1,0 +1,32 @@
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+   font-size: 1.2em;
+}
+
+$heading-size: (
+   h1: 2.4em,
+   h2: 2.2em,
+   h3: 2em,
+   h4: 1.8em,
+   h5: 1.6em,
+   h6: 1.4em,
+);
+
+@each $proverty, $value in $heading-size {
+   #{$proverty} {
+      font-size: $value;
+      font-weight: 700;
+   }
+}
+
+@mixin title-main {
+   font-size: 2.4em;
+   font-weight: 700;
+}
+
+.title-big {
+   @include title-main();
+}
