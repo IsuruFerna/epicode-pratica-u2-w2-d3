@@ -1,10 +1,10 @@
 $spacing-pading-margin: (
-   sm: 1em,
-   normal: 1.2em,
+   sm: 0.5em,
+   normal: 1em,
    md: 1.4em,
    lg: 1.6em,
-   xl: 1.8em,
-   xxl: 2em,
+   xl: 5em,
+   xxl: 10em,
 );
 
 // border
@@ -15,12 +15,10 @@ $spacing-pading-margin: (
 @each $property, $size in $spacing-pading-margin {
    // padding
    .p-block-#{$property} {
-      padding: $size;
-      display: block;
+      padding: 0 $size;
    }
    .p-inline-#{$property} {
-      padding: $size;
-      display: inline;
+      padding: $size 0;
    }
    .p-#{$property} {
       padding: $size;
@@ -48,12 +46,10 @@ $spacing-pading-margin: (
 
    //  margin
    .m-block-#{$property} {
-      margin: $size;
-      display: block;
+      margin: 0 $size;
    }
    .m-inline-#{$property} {
-      margin: $size;
-      display: inline;
+      margin: $size 0;
    }
    .m-#{$property} {
       margin: $size;

@@ -1,1 +1,23 @@
-$btn-transition: all 1s ease-out;
+$btn-transition: all 0.3s ease-out;
+
+$fade-in-down: 1.5s ease-in-out 0s 1 animation-fade_in_down;
+$fade-in-up: 1.5s ease-in-out 0s 1 animation-fade_in_up;
+
+@keyframes animation-fade_in_down {
+   from {
+      opacity: 0;
+      transform: translateY(-2em);
+   }
+   to {
+      opacity: 100;
+   }
+}
+@keyframes animation-fade_in_up {
+   from {
+      opacity: 0;
+      transform: translateY(2em);
+   }
+   to {
+      opacity: 100;
+   }
+}

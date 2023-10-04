@@ -15,57 +15,108 @@
 html,
 body {
    height: 100%;
-}
-
-body {
-   background: url("../assets/img/hero-bg-original.jpg");
-   background-size: cover;
-}
-
-nav {
-   background-color: $bg_hero_nav;
-   display: flex;
    width: 100%;
-   position: fixed;
-   top: 0;
+}
 
-   ul {
-      width: 500px;
+header {
+   background-color: $bg_hero;
+
+   nav {
+      display: flex;
+      width: 100%;
+      height: 110px;
+
+      ul {
+         margin-left: auto;
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+
+         li a {
+            color: $color-text;
+            text-decoration: none;
+
+            &:hover {
+               color: #ff8700;
+            }
+         }
+      }
+   }
+
+   .hero {
+      min-height: 600px;
       display: flex;
 
-      li a {
-         color: #fff;
+      .container {
+         display: flex;
+         flex-direction: column;
+         width: 60%;
+         animation: $fade-in-down;
+
+         h1,
+         p {
+            color: $color-text;
+         }
+
+         .buttons {
+            display: flex;
+            width: 80%;
+
+            button {
+               @include floating;
+               border: none;
+               box-shadow: none;
+               width: 100%;
+               transition: $btn-transition;
+
+               &:hover {
+                  transform: scale(0.95);
+                  @include floating;
+                  border: none;
+               }
+            }
+         }
+      }
+
+      .img-container {
+         position: relative;
+         right: 0;
+         width: 45%;
+         animation: $fade-in-up;
+
+         img {
+            position: absolute;
+            right: 0;
+            object-fit: contain;
+            width: 100%;
+            @include floating;
+         }
       }
    }
 }
 
 main {
-   height: 100%;
-   //   width: 100%;
-
+   width: 100%;
    display: flex;
+   align-items: center;
+   justify-content: center;
 
-   .hero {
-      // height: 100%;
+   .container-row {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      flex-grow: 1;
-      background-color: $bg_hero;
 
-      h1,
-      p {
-         color: #fff;
-      }
+      .content-img {
+         width: 20%;
+         overflow: hidden;
+         @include floating;
+         border: none;
+         box-shadow: none;
 
-      .buttons {
-         display: flex;
-         width: 50%;
-
-         button {
-            @include floating;
+         .img {
+            // width: 100%;
             width: 100%;
+            object-fit: contain;
          }
       }
    }
